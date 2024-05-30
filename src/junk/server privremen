@@ -1,0 +1,35 @@
+{
+  "potholes":
+    [
+      {
+        "id": "4",
+        "date": "23.05.2024",
+        "time": "10:12AM",
+        "type": "small",
+        "location": "Ulica Londonska karsi Skara bar",
+        "description": "Golema dupka pokraj restoranot posle peshackiot.. od desna strana koga vozite nakaj CityMall tesko se izbegnuva ako ima zgolemen soobrakjaj",
+        "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF3yI4XARggC-EUSedQQBAQb2buYsyI2-LRMbWEsLypQ&s",
+        "coords": [41.9927, 21.4182],
+      },
+      {
+        "id": "5",
+        "date": "23.05.2024",
+        "time": "10:12AM",
+        "type": "small",
+        "location": "Ulica Londonska karsi Skara bar",
+        "description": "Golema dupka pokraj restoranot posle peshackiot.. od desna strana koga vozite nakaj CityMall tesko se izbegnuva ako ima zgolemen soobrakjaj",
+        "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNZmqG0sf07rtIRT-xKkDwJtiI--UsAI-3-N0LYtq2vQ&s",
+        "coords": [41.9927, 21.4182],
+      },
+      {
+        "id": "6",
+        "date": "23.05.2024",
+        "time": "10:12AM",
+        "type": "small",
+        "location": "Ulica Londonska karsi Skara bar",
+        "description": "Golema dupka pokraj restoranot posle peshackiot.. od desna strana koga vozite nakaj CityMall tesko se izbegnuva ako ima zgolemen soobrakjaj",
+        "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnz9OulSMDLwwAMp-c8KQ53rhPLPvahJqjTo7i0-ocgQ&s",
+        "coords": [41.9927, 21.4182],
+      },
+    ],
+}
