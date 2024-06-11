@@ -81,7 +81,12 @@ const Form = ({ data }) => {
               if (data.potholeSize === "Large 💥") {
                 color = "#f97316";
               }
-
+              if (coordinates === null) {
+                alert(
+                  "Please place the location of the PotHole on the map then proceed to submit"
+                );
+                return;
+              }
               submitForm(data, coordinates, img64, newId, color);
             };
           })}

@@ -50,7 +50,7 @@ const WelcomeHero = () => {
           </option>
           <option className="text-orange-200" value="/mapTrees">
             {" "}
-            MapTrees{" "}
+            MapTrees(alpha){" "}
           </option>
         </select>
 

@@ -13,7 +13,7 @@ const PotHolesListAll = ({ isHome = false, data }) => {
       try {
         const res = await fetch("http://localhost:8000/potholes");
         const data = await res.json();
-        setMainData(data);
+        setMainData(data.reverse());
       } catch (error) {
         console.log("Error fetching data", error);
       } finally {

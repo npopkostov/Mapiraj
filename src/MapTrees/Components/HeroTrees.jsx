@@ -28,7 +28,9 @@ const HeroTrees = ({ isActivated, selectedId, small, medium, large }) => {
         setRenderId([selectedId]);
       }
       if (renderId.length >= 1) {
-        setRenderId([...renderId, selectedId]);
+        if (!renderId.includes(selectedId)) {
+          setRenderId([...renderId, selectedId]);
+        }
       }
     }
     if (!isActivated && selectedId) {
@@ -40,9 +42,10 @@ const HeroTrees = ({ isActivated, selectedId, small, medium, large }) => {
     }
   }, [isActivated, selectedId, small, medium, large]);
 
-  useEffect(() => {
-    console.log("The Render ID value -this is for testin purpose:", renderId);
-  }, [renderId]);
+  //For testing purpose:
+  // useEffect(() => {
+  //   console.log("The Render ID value -this is for testin purpose:", renderId);
+  // }, [renderId]);
 
   return loading ? (
     <Spinner loading={loading} />
@@ -55,13 +58,17 @@ const HeroTrees = ({ isActivated, selectedId, small, medium, large }) => {
             return tree.detailsLarge.coords.map((coords) => {
               return (
                 <Marker
-                  className={large ? "block" : "hidden"}
+                  className={
+                    large.slice(0, 6) === `false` + `${tree.id}`
+                      ? "hidden"
+                      : "block"
+                  }
                   width={30}
                   anchor={coords}
                   color="#166534"
-                  onClick={() =>
-                    console.log(`${tree.title} - ${tree.detailsLarge.tree}`)
-                  }
+                  onClick={() => {
+                    console.log(`${tree.title} - ${tree.detailsLarge.tree}`);
+                  }}
                 />
               );
             });
@@ -73,7 +80,11 @@ const HeroTrees = ({ isActivated, selectedId, small, medium, large }) => {
             return tree.detailsMedium.coords.map((coords) => {
               return (
                 <Marker
-                  className={medium ? "block" : "hidden"}
+                  className={
+                    medium.slice(0, 6) === `false` + `${tree.id}`
+                      ? "hidden"
+                      : "block"
+                  }
                   width={30}
                   anchor={coords}
                   color="#5A9D37"
@@ -91,7 +102,11 @@ const HeroTrees = ({ isActivated, selectedId, small, medium, large }) => {
             return tree.detailsSmall.coords.map((coords) => {
               return (
                 <Marker
-                  className={small ? "block" : "hidden"}
+                  className={
+                    small.slice(0, 6) === `false` + `${tree.id}`
+                      ? "hidden"
+                      : "block"
+                  }
                   width={30}
                   anchor={coords}
                   color="#94DA49"

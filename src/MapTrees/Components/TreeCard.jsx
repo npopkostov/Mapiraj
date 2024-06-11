@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import Spinner from "../../components/Spinner";
-import { FaLightbulb } from "react-icons/fa";
-import { FaRegLightbulb } from "react-icons/fa";
-
+import Switch from "react-switch";
 const TreeCard = ({ data, sendDataForRender }) => {
   const [loading, setLoading] = useState(true);
   const [mainData, setMainData] = useState(data);
@@ -18,23 +16,29 @@ const TreeCard = ({ data, sendDataForRender }) => {
     treeBtnMedium,
     treeBtnLarge
   ) => {
-    sendDataForRender(turnedOn, id, treeBtnSmall, treeBtnMedium, treeBtnLarge);
+    sendDataForRender(
+      turnedOn,
+      id,
+      treeBtnSmall + `${id}`,
+      treeBtnMedium + `${id}`,
+      treeBtnLarge + `${id}`
+    );
   };
 
   const treeDivStyle = turnedOn
-    ? "h-60 bg-indigo-50 rounded rounded-xl shadow-xl border border-gray-300 border-1"
+    ? "h-60 bg-sky-200 rounded rounded-xl shadow-xl border border-gray-300 border-1"
     : "h-60 bg-white rounded rounded-xl shadow-xl border border-gray-300 border-1";
 
   const treeBtnSm = treeBtnSmall
-    ? "inline hover:bg-white rounded rouned-m shadow mr-1 bg-indigo-400"
+    ? "inline hover:bg-white rounded rouned-m shadow mr-1 bg-sky-600"
     : "inline hover:bg-indigo-300 rounded rouned-m shadow mr-1 border bg-white";
 
   const treeBtnMd = treeBtnMedium
-    ? "inline hover:bg-white rounded rouned-m shadow mr-1 bg-indigo-400"
+    ? "inline hover:bg-white rounded rouned-m shadow mr-1 bg-sky-600"
     : "inline hover:bg-indigo-300 rounded rouned-m shadow mr-1 border bg-white";
 
   const treeBtnLg = treeBtnLarge
-    ? "inline hover:bg-white rounded rouned-m shadow mr-1 bg-indigo-400"
+    ? "inline hover:bg-white rounded rouned-m shadow mr-1 bg-sky-600"
     : "inline hover:bg-indigo-300 rounded rouned-m shadow mr-1 border bg-white";
 
   useEffect(() => {
@@ -52,24 +56,28 @@ const TreeCard = ({ data, sendDataForRender }) => {
   ) : (
     <div>
       <div className="flex items-end justify-end">
-        <button
-          className="bg-indigo-300 rounded-t-xl pl-3 pr-3 py-1 mr-3"
-          onClick={() => {
-            setTurnedOn((prev) => !prev);
-            setTreeBtnSmall((prev) => !prev);
-            setTreeBtnMedium((prev) => !prev);
-            setTreeBtnLarge((prev) => !prev);
-            handleBtnClick(
-              !turnedOn,
-              mainData.id,
-              !treeBtnSmall,
-              !treeBtnMedium,
-              !treeBtnLarge
-            );
-          }}
-        >
-          {turnedOn ? <FaRegLightbulb /> : <FaLightbulb />}
-        </button>
+        <div>
+          <Switch
+            onChange={() => {
+              setTurnedOn((prev) => !prev);
+              setTreeBtnSmall((prev) => !prev);
+              setTreeBtnMedium((prev) => !prev);
+              setTreeBtnLarge((prev) => !prev);
+              handleBtnClick(
+                !turnedOn,
+                mainData.id,
+                !treeBtnSmall,
+                !treeBtnMedium,
+                !treeBtnLarge
+              );
+            }}
+            checked={turnedOn}
+            offColor="#888"
+            onColor="#0284c7"
+            uncheckedIcon={false}
+            checkedIcon={false}
+          />
+        </div>
       </div>
       <div className={treeDivStyle}>
         <h1 className="flex items-center justify-center mt-1 font-bold text-xl">
@@ -86,7 +94,7 @@ const TreeCard = ({ data, sendDataForRender }) => {
               onClick={() => {
                 if (turnedOn) {
                   setTreeBtnSmall((prev) => !prev);
-                  console.log(treeBtnSmall);
+
                   handleBtnClick(
                     turnedOn,
                     mainData.id,

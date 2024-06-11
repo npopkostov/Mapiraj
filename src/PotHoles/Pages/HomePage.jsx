@@ -17,7 +17,7 @@ const HomePage = ({ data }) => {
         const data = await res.json();
         setMainData(data);
         const testData = data.slice(data.length - 6, data.length);
-        setRecentData(testData);
+        setRecentData(testData.reverse());
       } catch (error) {
         console.log("Error fetching data", error);
       } finally {
