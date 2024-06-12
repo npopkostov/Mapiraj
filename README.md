@@ -2,7 +2,7 @@
 
 npm run dev // to start the app
 
-npm run server-pothgoles // to start json-server for potholes
+npm run server-potholes // to start json-server for potholes
 
 npm run server-maptrees // to start json-server for maptrees
 
