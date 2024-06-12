@@ -8,8 +8,8 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "json-server --watch src/potholes.json --port 8000",
-    "server2": "json-server --watch src/maptrees.json --port 9000"
+    "server-potholes": "json-server --watch src/potholes.json --port 8000",
+    "server-maptrees": "json-server --watch src/maptrees.json --port 9000"
   },
   "dependencies": {
     "pigeon-maps": "^0.21.5",
