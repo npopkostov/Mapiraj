@@ -8,7 +8,7 @@ npm run server-maptrees // to start json-server for maptrees
 
 # Upcomming updates:
 
-- Implementing base instead of using json-server;
+- Implementing database instead of using json-server;
 - Completing MapTrees Simulator and "Map Trees" function;
 
 # Planned future updates:
