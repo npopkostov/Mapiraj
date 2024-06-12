@@ -1,3 +1,5 @@
+# Instructions to test the app
+
 npm run dev
 
 npm run server
