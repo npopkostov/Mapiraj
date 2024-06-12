@@ -4,18 +4,16 @@ npm run dev // to start the app
 
 npm run server-pothgoles // to start json-server for potholes
 
-npm run server2 // to start json-server for maptrees
+npm run server-maptrees // to start json-server for maptrees
 
 # Upcomming updates:
 
 - Implementing base instead of using json-server;
-  
 - Completing MapTrees Simulator and "Map Trees" function;
 
 # Planned future updates:
 
 - Implementing "MapNoise","MapPoison" and "MapEvents";
-
 
 # React + Vite
 
