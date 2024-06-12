@@ -6,6 +6,16 @@ npm run server
 
 npm run server2
 
+# Upcomming updates:
+
+- Implementing base instead of using json-server;
+  
+- Completing MapTrees Simulator and "Map Trees" function;
+
+# Planned future updates:
+
+- Implementing "MapNoise","MapPoison" and "MapEvents";
+
 
 # React + Vite
 
