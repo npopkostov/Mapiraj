@@ -1,10 +1,10 @@
 # Instructions to test the app
 
-npm run dev
+npm run dev // to start the app
 
-npm run server
+npm run server-pothgoles // to start json-server for potholes
 
-npm run server2
+npm run server2 // to start json-server for maptrees
 
 # Upcomming updates:
 
