@@ -14,6 +14,7 @@ import PotHolesListAll from "../../PotHoles/Pages/PotHolesListAll";
 import ReportPotHolePage from "../../PotHoles/Pages/ReportPotHolePage";
 import PotHolePage from "../../PotHoles/Pages/PotHolePage";
 import MapTreesPage from "../../MapTrees/Pages/MapTreesPage";
+import InConstructionPage from "./InConstructionPage";
 const WelcomePage = () => {
   const [data, setData] = useState("");
   const [loading, setLoading] = useState(true);
@@ -51,6 +52,7 @@ const WelcomePage = () => {
             element={<ReportPotHolePage data={data} />}
           />
           <Route path="/potholes/:id" element={<PotHolePage />} />
+          <Route path="*" element={<InConstructionPage />} />
           <Route path="/mapNewTrees" element={<MapTreesPage />} />
         </>
       )

@@ -34,10 +34,13 @@ const Header = () => {
                   <NavLink to="/mapTrees" className={linkClass}>
                     Home
                   </NavLink>
-                  <NavLink to="/potHoleListAll" className={linkClassSimlator}>
+                  <NavLink
+                    to="/mapTreesSimulator"
+                    className={linkClassSimlator}
+                  >
                     Simulator(beta)
                   </NavLink>
-                  <NavLink className={linkClass} to="/mapNewTrees">
+                  <NavLink className={linkClass} to="/mapNewTreesNow">
                     Map Trees
                   </NavLink>
                 </div>
