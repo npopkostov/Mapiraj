@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../../PotHoles/Components/Header";
-import Footer from "../../PotHoles/Components/Footer";
+import Header from "../../MapTrees/Components/Header";
+import Footer from "../../MapTrees/Components/Footer";
 import { MdConstruction } from "react-icons/md";
 
 const InConstructionPage = () => {

@@ -7,11 +7,6 @@ const Header = () => {
       ? "bg-black text-white  hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
       : "text-white  hover:bg-gray-900 hover:text-white rounded-md px-3 py-2";
 
-  const linkClassSimlator = ({ isActive }) =>
-    isActive
-      ? "bg-black text-white  hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-      : "text-green-400 font-medium bg-indigo-600 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2";
-
   return (
     <>
       <nav className="bg-green-700 border-b border-indigo-500">
@@ -34,11 +29,8 @@ const Header = () => {
                   <NavLink to="/mapTrees" className={linkClass}>
                     Home
                   </NavLink>
-                  <NavLink
-                    to="/mapTreesSimulator"
-                    className={linkClassSimlator}
-                  >
-                    Simulator(beta)
+                  <NavLink to="/mapTreesSimulator" className={linkClass}>
+                    Simulator
                   </NavLink>
                   <NavLink className={linkClass} to="/mapNewTreesNow">
                     Map Trees
